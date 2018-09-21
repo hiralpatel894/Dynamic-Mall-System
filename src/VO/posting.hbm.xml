@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.PostingVO" table="Ads_Posted">
+  
+   <id name="sell_Id" type="int" column="sell_Id" ><generator class="increment"/> </id>
+   
+   <property name="phone"><column name="phone" /></property>
+   
+   <property name="Ads_Desc"><column name="Ads_Desc" /></property>
+     
+   <many-to-one name="categoryVO" column="cat_Id" class="VO.CategoryVO" lazy="false"></many-to-one>
+   <many-to-one name="subcategoryVO" column="subcat_Id" class="VO.SubcategoryVO" lazy="false"></many-to-one>
+   
+ </class>
+</hibernate-mapping>

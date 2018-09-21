@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.AdvertisementVO" table="addAdvertisement">
+
+		<id name="advertisement_Id" type="int" column="advertisement_Id">
+			<generator class="increment" />
+		</id>
+
+		<property name="advertisement_Name">
+			<column name="advertisement_Name" />
+		</property>
+
+		<property name="advertisement_Des">
+			<column name="advertisement_Des" />
+		</property>
+ <many-to-one name="categoryVO" column="cat_Name" class="VO.CategoryVO"></many-to-one>
+<many-to-one name="subcategoryVO" column="subcat_Name" class="VO.SubcategoryVO"></many-to-one>		
+	</class>
+
+</hibernate-mapping>

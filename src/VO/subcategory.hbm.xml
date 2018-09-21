@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.SubcategoryVO" table="addSubcategory">
+
+		<id name="subcat_Id" type="int" column="subcat_Id">
+			<generator class="increment" />
+		</id>
+
+		<property name="subcat_Name">
+			<column name="subcat_Name" />
+		</property>
+
+		<property name="subcat_Des">
+			<column name="subcat_Des" />
+		</property>
+ <many-to-one name="categoryVO" column="cat_Id" class="VO.CategoryVO"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

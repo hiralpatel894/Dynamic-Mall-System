@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  
+  <class name="VO.AuctionMappingVO" table="Auction_Mapped" lazy="false" >
+  
+   <id name="auction_Id" type="int" column="auction_Id" ><generator class="increment"/> </id>
+ 
+   <property name="auction_Name"><column name="auction_Name" /></property>
+   
+   <!--  <property name="Product_Name"><column name="Product_Name" /></property> -->
+   
+   <property name="path"><column name="path" /></property>
+   
+   <many-to-one name="auctionVO" class="VO.AuctionVO" cascade="delete"  fetch="select" ></many-to-one>
+   
+ </class>
+</hibernate-mapping>

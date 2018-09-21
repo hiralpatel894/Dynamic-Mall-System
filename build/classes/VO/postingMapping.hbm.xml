@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  
+  <class name="VO.PostingMappingVO" table="Ads_Mapped" lazy="false" >
+  
+   <id name="ads_Id" type="int" column="ads_Id" ><generator class="increment"/> </id>
+ 
+   <property name="ads_Name"><column name="Ads_Name" /></property>
+   
+   <property name="path"><column name="path" /></property>
+   
+   <many-to-one name="postingVO" class="VO.PostingVO" cascade="delete"  fetch="select" ></many-to-one>
+   
+ </class>
+</hibernate-mapping>

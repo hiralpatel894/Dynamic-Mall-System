@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ProfileVO" table="SellerProfile">
+	
+	<id name="profile_Id" type="int" column="profile_Id">
+	     <generator class="increment" />
+	</id>
+
+		<property name="pin_Code">
+			<column name="pin_Code"></column>
+		</property>
+		
+		<property name="mobile">
+			<column name="Mobile"></column>
+		</property>
+		
+		<property name="phone_Number">
+			<column name="phone_Number"></column>
+		</property>
+		
+		<property name="temp_Addr">
+			<column name="temp_Addr"></column>
+		</property>
+		
+		<property name="perm_Addr">
+			<column name="perm_Addr"></column>
+		</property>
+		
+		<property name="shop_Name">
+			<column name="shop_Name"></column>
+		</property>
+		
+		<property name="shop_Desc">
+			<column name="shop_Desc"></column>
+		</property>
+		
+		 <many-to-one name="countryVO" column="country_Id" class="VO.CountryVO"></many-to-one>
+  	 	<many-to-one name="stateVO" column="state_Id" class="VO.StateVO"></many-to-one>
+   		<many-to-one name="cityVO" column="city_Id" class="VO.CityVO"></many-to-one>
+   		
+	</class>
+
+</hibernate-mapping>

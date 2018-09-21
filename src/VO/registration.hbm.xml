@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.RegistrationVO" table="SellerRegis">
+	
+	<id name="reg_Id" type="int" column="reg_Id">
+	     <generator class="increment" />
+	</id>
+
+		<property name="f_Name">
+			<column name="f_Name"></column>
+		</property>
+		
+		<property name="l_Name">
+			<column name="l_Name"></column>
+		</property>
+		
+		<property name="u_Name">
+			<column name="u_Name"></column>
+		</property>
+		
+		<property name="email">
+			<column name="email"></column>
+		</property>
+		
+		<property name="pass">
+			<column name="pass"></column>
+		</property>
+		
+		<property name="repass">
+			<column name="repass"></column>
+		</property>
+		
+		<property name="gender">
+			<column name="Gender"></column>
+		</property>
+		
+	</class>
+
+</hibernate-mapping>

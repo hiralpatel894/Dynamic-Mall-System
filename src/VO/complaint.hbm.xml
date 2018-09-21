@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ComplaintVO" table="addcomplaint">
+
+		<id name="complaint_Id" type="int" column="complaint_Id">
+			<generator class="increment" />
+		</id>
+		
+		<property name="email">
+			<column name="email" />
+		</property>
+		
+		
+
+		<property name="complaint_Subject">
+			<column name="complaint_Subject" />
+		</property>
+
+		<property name="complaint_Message">
+			<column name="complaint_Message" />
+		</property>
+	
+	</class>
+
+</hibernate-mapping>
